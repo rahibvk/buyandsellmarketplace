@@ -1,0 +1,19 @@
+/usr/local/lib/python3.11/site-packages/pytest_asyncio/plugin.py:208: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts ==============================
+platform linux -- Python 3.11.14, pytest-8.3.3, pluggy-1.6.0
+rootdir: /app/backend
+configfile: pytest.ini
+plugins: anyio-4.12.0, asyncio-0.24.0
+asyncio: mode=Mode.STRICT, default_loop_scope=None
+collected 2 items
+
+app/tests/test_auth.py DEBUG: Logout called with token: eyJhbGciOi...
+DEBUG: Decoded user_id: 86175747-ea5b-41b4-a14f-c4dd199eb879
+DEBUG: Found 2 tokens for user
+DEBUG: Deleting token 598f6304-37b8-484f-9e49-fbd033d0dfbc
+..
+
+============================== 2 passed in 2.34s ===============================
